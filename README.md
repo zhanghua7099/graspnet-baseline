@@ -38,18 +38,19 @@ pip install -r requirements.txt
 Compile and install pointnet2 operators (code adapted from [votenet](https://github.com/facebookresearch/votenet)).
 ```bash
 cd pointnet2
-python setup.py install
+python -m pip install --user .
 ```
 Compile and install knn operator (code adapted from [pytorch_knn_cuda](https://github.com/chrischoy/pytorch_knn_cuda)).
 ```bash
 cd knn
-python setup.py install
+python -m pip install --user .
 ```
 Install graspnetAPI for evaluation.
 ```bash
 git clone https://github.com/graspnet/graspnetAPI.git
 cd graspnetAPI
-pip install .
+# modify 'sklearn' -> 'scikit-learn' in `setup.py`.
+python -m pip install --user .
 ```
 
 ## Tolerance Label Generation
